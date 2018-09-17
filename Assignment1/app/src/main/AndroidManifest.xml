@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfilePart1Activity" />
-        <activity android:name=".ProfilePart2Activity"></activity>
+        <activity android:name=".ProfilePartOneActivity" />
+        <activity android:name=".ProfilePartTwoActivity"></activity>
     </application>
 
 </manifest>
