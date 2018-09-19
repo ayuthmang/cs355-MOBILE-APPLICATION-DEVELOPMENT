@@ -3,4 +3,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lastname">Lastname</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="email">E-mail</string>
+    <string name="phone">Phone No</string>
+    <string name="header_text">Assignment 1</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
 </resources>
