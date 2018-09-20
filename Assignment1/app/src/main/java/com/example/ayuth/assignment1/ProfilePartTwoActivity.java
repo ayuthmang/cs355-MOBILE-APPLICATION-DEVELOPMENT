@@ -32,12 +32,15 @@ public class ProfilePartTwoActivity extends AppCompatActivity {
         imgProfile = findViewById(R.id.imgProfile);
 
         String age = getAgeByBirthdate(getIntent().getStringExtra("birthdate"));
+        String phone = getIntent().getStringExtra("phone");
 
         etName.setText(getIntent().getStringExtra("name"));
         etLastName.setText(getIntent().getStringExtra("lastname"));
         etAge.setText(String.format("%s %s", age, "years"));
         etEmail.setText(getIntent().getStringExtra("email"));
-        etPhone.setText(getIntent().getStringExtra("phone"));
+
+
+        etPhone.setText(String.format("%s-%s-%s", phone.substring(0, 3), phone.substring(3, 6), phone.substring(6, 10)));
 
         setProfileImageByAge(Integer.parseInt(age.toString()));
     }
