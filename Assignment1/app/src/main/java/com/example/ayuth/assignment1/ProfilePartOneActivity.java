@@ -41,6 +41,7 @@ public class ProfilePartOneActivity extends AppCompatActivity implements View.On
 
         btnSubmit.setOnClickListener(this);
         etBirthDate.setOnClickListener(this);
+        debug();
     }
 
     @Override
@@ -87,6 +88,14 @@ public class ProfilePartOneActivity extends AppCompatActivity implements View.On
             return false;
         }
         return true;
+    }
+
+    void debug() {
+        etName.setText("Ayuth");
+        etLastName.setText("Mangmesap");
+        etBirthDate.setText("01/02/1993");
+        etEmail.setText("admin@test.com");
+        etPhone.setText("0123456789");
     }
 }
 

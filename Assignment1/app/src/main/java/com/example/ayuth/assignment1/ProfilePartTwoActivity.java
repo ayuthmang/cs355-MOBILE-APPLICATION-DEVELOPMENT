@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import java.time.LocalDate;
 import java.util.Calendar;
 
 public class ProfilePartTwoActivity extends AppCompatActivity {
@@ -32,16 +31,28 @@ public class ProfilePartTwoActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhone_part_2);
         imgProfile = findViewById(R.id.imgProfile);
 
+        String age = getAgeByBirthdate(getIntent().getStringExtra("birthdate"));
+
         etName.setText(getIntent().getStringExtra("name"));
         etLastName.setText(getIntent().getStringExtra("lastname"));
-        etAge.setText(getAgeByBirthdate(getIntent().getStringExtra("birthdate")));
+        etAge.setText(String.format("%s %s", age, "years"));
         etEmail.setText(getIntent().getStringExtra("email"));
         etPhone.setText(getIntent().getStringExtra("phone"));
+
+        setProfileImageByAge(Integer.parseInt(age.toString()));
     }
 
 
-    private int setImageByAge(int age) {
-        return 0;
+    private void setProfileImageByAge(int age) {
+        if (age >= 0 && age <= 15) {
+            imgProfile.setImageResource(R.drawable.baby);
+        } else if (age >= 16 && age <= 25) {
+            imgProfile.setImageResource(R.drawable.teen);
+        } else if (age >= 26 && age <= 60) {
+            imgProfile.setImageResource(R.drawable.adult);
+        } else {
+            imgProfile.setImageResource(R.drawable.old);
+        }
     }
 
     private String getAgeByBirthdate(String DOB) {
