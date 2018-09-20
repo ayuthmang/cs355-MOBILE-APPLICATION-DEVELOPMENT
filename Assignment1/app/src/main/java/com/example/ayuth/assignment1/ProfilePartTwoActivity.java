@@ -17,4 +17,12 @@ public class ProfilePartTwoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_part_two);
     }
+
+    public void initInstances() {
+        etName = findViewById(R.id.etFirstName_part_2);
+        etLastName = findViewById(R.id.etLastName_part_2);
+        etAge = findViewById(R.id.etAge);
+        etEmail = findViewById(R.id.etEmail_part_2);
+        etPhone = findViewById(R.id.etPhone_part_2);
+    }
 }

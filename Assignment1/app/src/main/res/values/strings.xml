@@ -10,4 +10,5 @@
     <string name="header_text">Assignment 1</string>
     <string name="name">Name</string>
     <string name="submit">Submit</string>
+    <string name="tap_to_pick_a_date">Tap to pick a date</string>
 </resources>

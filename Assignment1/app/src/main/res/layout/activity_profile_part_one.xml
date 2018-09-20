@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="text" />
+                android:inputType="textCapWords|textCapSentences" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
-                android:inputType="text" />
+                android:inputType="textCapWords|textCapSentences" />
         </LinearLayout>
 
         <LinearLayout
@@ -73,6 +73,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/tap_to_pick_a_date"
                 android:imeOptions="actionNext"
                 android:inputType="date" />
         </LinearLayout>
@@ -111,7 +113,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionDone"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:maxLength="10" />
         </LinearLayout>
 
         <LinearLayout
