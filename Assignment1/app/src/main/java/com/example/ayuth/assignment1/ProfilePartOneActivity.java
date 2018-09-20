@@ -41,7 +41,7 @@ public class ProfilePartOneActivity extends AppCompatActivity implements View.On
 
         btnSubmit.setOnClickListener(this);
         etBirthDate.setOnClickListener(this);
-        debug();
+//        debug();
     }
 
     @Override
