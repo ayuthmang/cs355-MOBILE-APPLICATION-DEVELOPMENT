@@ -4,8 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    AutoCompleteTextView autoCompleteTextView;
+    MultiAutoCompleteTextView multiAutoCompleteTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void initInstances() {
         setContentView(R.layout.activity_main);
-        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
+
         String[] countries = getResources().getStringArray(R.array.countries_name);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
-        textView.setAdapter(adapter);
+
+        autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+        ArrayAdapter<String> adapterOne = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
+        autoCompleteTextView.setAdapter(adapterOne);
+
+        multiAutoCompleteTextView = findViewById(R.id.multiAutoCompleteTextView);
+        ArrayAdapter<String> adapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, countries);
+        multiAutoCompleteTextView.setAdapter(adapterTwo);
+        multiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
     }
 }

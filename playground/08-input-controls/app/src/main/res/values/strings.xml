@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">08-input-controls</string>
+    <string name="autocomplete_textview">AutoComplete TextView</string>
+    <string name="multiautocompletetextview">MultiAutoCompleteTextView</string>
     <array name="countries_name">
         <item>Afghanistan</item>
         <item>Albania</item>
