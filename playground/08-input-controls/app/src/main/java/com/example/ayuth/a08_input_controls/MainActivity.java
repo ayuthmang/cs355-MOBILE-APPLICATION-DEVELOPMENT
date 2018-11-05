@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
     AutoCompleteTextView autoCompleteTextView;
     MultiAutoCompleteTextView multiAutoCompleteTextView;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,5 +33,11 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterTwo = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, countries);
         multiAutoCompleteTextView.setAdapter(adapterTwo);
         multiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+
+        // Spinner
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.countries_name, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
 }
