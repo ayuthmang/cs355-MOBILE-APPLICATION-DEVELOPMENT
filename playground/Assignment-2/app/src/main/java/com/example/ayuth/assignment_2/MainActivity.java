@@ -7,6 +7,7 @@ import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private float last_x, last_y, last_z;
     private int predictedNum;
     private TextView tvSiamseeResultTitle, tvSiamseeResult;
+    private ImageView imgSiamsee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         sensorMgr.registerListener(this, accSensor, SensorManager.SENSOR_DELAY_NORMAL);
         sensorMgr.registerListener(this, magnetSensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+        imgSiamsee = findViewById(R.id.imgSiamsee);
+        imgSiamsee.setImageResource(R.drawable.siamsee);
     }
 
     @Override
