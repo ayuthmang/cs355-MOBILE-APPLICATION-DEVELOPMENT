@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Assignment-2</string>
+    <string name="siamsee_result_title">ผลลัพธ์เซียมซีของคุณคือ</string>
+    <string name="siamsee_result_mock">โปรดเขย่าโทรศัพท์เพื่อเริ่มทำนาย</string>
+</resources>
