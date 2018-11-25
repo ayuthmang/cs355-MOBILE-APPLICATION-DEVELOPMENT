@@ -1,4 +1,4 @@
-package com.example.ayuth.a09_animation;
+package com.example.ayuth.androidpresentationremoteclient;
 
 import org.junit.Test;
 

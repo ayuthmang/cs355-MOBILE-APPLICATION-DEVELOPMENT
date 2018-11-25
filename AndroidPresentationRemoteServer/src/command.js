@@ -9,7 +9,6 @@ const stopPresentation = () => {
 }
 
 const gotoNextSlide = () => {
-  // use arrow key down instead of
   robot.keyTap('down')
 }
 

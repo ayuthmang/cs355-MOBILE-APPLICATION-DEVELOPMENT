@@ -1,4 +1,4 @@
-package com.example.ayuth.a09_media;
+package com.example.ayuth.androidpresentationremoteclient;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.ayuth.a09_media", appContext.getPackageName());
+        assertEquals("com.example.ayuth.androidpresentationremoteclient", appContext.getPackageName());
     }
 }
