@@ -47,6 +47,7 @@
   </head>
   <body>
     <div>
+      <h3>Other</h3>
       <button id="btnStartPresentation" type="button">
         Start Presentation
       </button>
@@ -55,8 +56,11 @@
 
     <div>
       <span>
-        <button id="btnPreviousSlide" type="button">Previous Slide</button>
-        <button id="btnNextSlide" type="button">Next Slide</button>
+        <h3>Navigation</h3>
+        <button id="btnGotoFirstSlide" type="button">First Slide</button>
+        <button id="btnGotoPreviousSlide" type="button">Previous Slide</button>
+        <button id="btnGotoNextSlide" type="button">Next Slide</button>
+        <button id="btnGotoLastSlide" type="button">Last Slide</button>
       </span>
     </div>
 
@@ -75,8 +79,10 @@
           const btnStopPresentation = document.getElementById(
             'btnStopPresentation'
           )
-          const btnPreviousSlide = document.getElementById('btnPreviousSlide')
-          const btnNextSlide = document.getElementById('btnNextSlide')
+          const btnGotoPreviousSlide = document.getElementById('btnGotoPreviousSlide')
+          const btnGotoNextSlide = document.getElementById('btnGotoNextSlide')
+          const btnGotoFirstSlide = document.getElementById('btnGotoFirstSlide')
+          const btnGotoLastSlide = document.getElementById('btnGotoLastSlide')
 
           btnStartPresentation.onclick = () => {
             socket.emit('command', {
@@ -89,14 +95,25 @@
             })
           }
 
-          btnPreviousSlide.onclick = () => {
+          btnGotoPreviousSlide.onclick = () => {
             socket.emit('command', {
-              command: 'previousSlide'
+              command: 'gotoPreviousSlide'
             })
           }
-          btnNextSlide.onclick = () => {
+          btnGotoNextSlide.onclick = () => {
             socket.emit('command', {
-              command: 'nextSlide'
+              command: 'gotoNextSlide'
+            })
+          }
+
+          btnGotoFirstSlide.onclick = () => {
+            socket.emit('command', {
+              command: 'gotoFirstSlide'
+            })
+          }
+          btnGotoLastSlide.onclick = () => {
+            socket.emit('command', {
+              command: 'gotoLastSlide'
             })
           }
         }

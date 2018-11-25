@@ -30,12 +30,20 @@ io.on('connection', socket => {
         command.stopPresentation()
         break
 
-      case 'nextSlide':
-        command.nextSlide()
+      case 'gotoNextSlide':
+        command.gotoNextSlide()
         break
 
-      case 'previousSlide':
-        command.previousSlide()
+      case 'gotoPreviousSlide':
+        command.gotoPreviousSlide()
+        break
+
+      case 'gotoFirstSlide':
+        command.gotoFirstSlide()
+        break
+
+      case 'gotoLastSlide':
+        command.gotoLastSlide()
         break
     }
   })
