@@ -2,6 +2,12 @@
 
 Apple is make everthing works perfectly on their echo system, you can turn your phone into a presentation remote but not my android (so sad). So I decided to make a simple presentation remote using node and socket.io to let my phone into a presentation remote. 
 
+## Prerequisite
+
+- NodeJS (8.12.0 or higher, I'm testing with 8.12.0 version)
+- Browser or android presentation remote client application (by the way browser is more flexible than native app)
+- You mac must on the same network and can talk to each other
+
 ## Installation 
 
 1. Goto project folder and `npm install` or `yarn install`
