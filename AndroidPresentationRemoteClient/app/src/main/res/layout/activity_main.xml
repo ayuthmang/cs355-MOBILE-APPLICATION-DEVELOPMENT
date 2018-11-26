@@ -4,6 +4,12 @@
     android:layout_margin="@dimen/margin_normal"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/etUri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Server ip ex. 192.168.1.37:3000" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,6 +1,7 @@
 package com.example.ayuth.androidpresentationremoteclient;
 
 
+import android.net.Uri;
 import android.util.Log;
 
 import com.github.nkzawa.socketio.client.IO;
@@ -34,13 +35,9 @@ public class RemoteSocket {
         return remoteSocketInstance;
     }
 
-    public void connect(String uri) {
-        try {
-            mSocket = IO.socket(uri);
-            mSocket.connect();
-        } catch (URISyntaxException e) {
-            Log.e("RemoteSocket", e.getMessage());
-        }
+    public void connect(String uri) throws URISyntaxException {
+        mSocket = IO.socket(uri);
+        mSocket.connect();
     }
 
     public void sendCommand(RemoteCommand remoteCommand) {
