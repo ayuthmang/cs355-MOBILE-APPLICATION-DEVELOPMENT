@@ -6,7 +6,6 @@ const io = require('socket.io')(http)
 const command = require('./command')
 
 app.get('/', (req, res) => {
-  // res.send('<h1>Hello world</h1>')
   res.sendFile(path.join(__dirname, '..', 'static') + '/index.html')
 })
 
@@ -49,6 +48,10 @@ io.on('connection', socket => {
   })
 })
 
-http.listen(3000, function() {
-  console.log('listening on *:3000')
+const PORT = 3000
+http.listen(PORT, function() {
+  // print serve's local ip address
+  require('dns').lookup(require('os').hostname(), function(err, add, fam) {
+    console.log(`listening on ${add}:${PORT}`)
+  })
 })
